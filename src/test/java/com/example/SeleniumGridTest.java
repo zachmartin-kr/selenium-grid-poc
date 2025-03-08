@@ -27,7 +27,7 @@ public class SeleniumGridTest {
     @Test
     public void testHelloWorld() {
         // Access the simple web app running locally in a container
-        driver.get("http://localhost:8080");
+        driver.get("http://webapp:8080");
         String pageSource = driver.getPageSource();
         assertTrue(pageSource.contains("Hello, World!"), "Page should contain 'Hello, World!'");
     }

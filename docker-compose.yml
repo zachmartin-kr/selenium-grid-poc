@@ -34,3 +34,11 @@ services:
       - "4442:4442"
       - "4443:4443"
       - "4444:4444"
+
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile.webapp
+    container_name: webapp
+    ports:
+      - "8080:8080"
