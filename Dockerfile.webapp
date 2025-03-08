@@ -1,0 +1,10 @@
+FROM python:3-slim
+
+WORKDIR /app
+COPY index.html /app/index.html
+
+EXPOSE 8080
+
+# Serve the current directory on port 8080
+CMD ["python", "-m", "http.server", "8080"]
+
