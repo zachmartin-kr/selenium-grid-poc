@@ -4,7 +4,11 @@ This project demonstrates how to run a Selenium Grid locally alongside a contain
 
 ## How to Run
 
-1. **Start the Docker Containers**  
+1. **Start the Docker Containers Detached**  
    In the project root, run:
    ```bash
-   docker-compose up --build
+   docker-compose up -d --build
+2. **Perform Maven Test**
+   In the project root, run:
+   ```bash
+   mvn clean test
