@@ -12,3 +12,5 @@ This project demonstrates how to run a Selenium Grid locally alongside a contain
    In the project root, run:
    ```bash
    mvn clean test
+
+To view the Selenium Grid, once the containers have started navigate to localhost:4444 in your browser. If you want to watch the test as it is performed, click the Sessions tab on the left of the screen, and then the camera icon for the running node. The password is **secret**.
