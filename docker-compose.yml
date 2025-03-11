@@ -1,39 +1,12 @@
 services:
-  chrome:
-    platform: linux/amd64
-    image: selenium/node-chrome:latest
-    shm_size: 2gb
-    depends_on:
-      - selenium-hub
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-
-  edge:
-    platform: linux/amd64
-    image: selenium/node-edge:latest
-    shm_size: 2gb
-    depends_on:
-      - selenium-hub
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-
-  firefox:
-    platform: linux/amd64
-    image: selenium/node-firefox:latest
-    shm_size: 2gb
-    depends_on:
-      - selenium-hub
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-
-  selenium-hub:
-    platform: linux/amd64
-    image: selenium/hub:latest
-    container_name: selenium-hub
+  chromium:
+    container_name: chromium
+    image: selenium/standalone-chromium:latest
+    shm_size: 2g
     ports:
-      - "4442:4442"
-      - "4443:4443"
       - "4444:4444"
+      - "5900:5900"
+      - "7900:7900"
 
   webapp:
     build:
